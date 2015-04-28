@@ -22,6 +22,14 @@ Or install it yourself as:
 
 ## Usage
 
+Copy the config/v1.yml.sample file to config/v1.yml. Then add and remove the row numbers that you want to keep in the v1 output. For instance, if you want to keep rows 1 and 2 (zero-indexed), you would have a YAML file like this:
+
+```yaml
+rows:
+- 1
+- 2
+```
+
 Put your original files in the orig folder in this repository. Then run:
 
     $ find orig -name '*.m' -exec bundle exec bin/eer_markers1 {} \;

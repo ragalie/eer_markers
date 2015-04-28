@@ -1,5 +1,3 @@
-require "csv"
-
 module EerMarkers
   class Base
     attr_reader :filename

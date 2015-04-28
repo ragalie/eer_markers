@@ -1,3 +1,6 @@
+require "csv"
+require "yaml"
+
 require "eer_markers/version"
 require "eer_markers/base"
 require "eer_markers/v1"

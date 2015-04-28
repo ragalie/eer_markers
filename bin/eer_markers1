@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require "eer_markers"
+EerMarkers::V1.new(ARGV[0]).perform

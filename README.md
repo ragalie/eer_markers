@@ -22,7 +22,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Put your original files in the orig folder in this repository. Then run:
+
+    $ find orig -name '*.m' -exec bundle exec bin/eer_markers1 {} \;
+
+When that completes, you'll see your v1 files in the v1 directory. You can then run:
+
+    $ find v1 -name '*.m' -exec bundle exec bin/eer_markers2 {} \;
 
 ## Development
 

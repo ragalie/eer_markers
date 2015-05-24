@@ -8,6 +8,10 @@ module EerMarkers
       @dial_directory = dial_directory
       @timing = {}
       @dial = {}
+
+      read_timing
+      read_dial
+      write
     end
 
     def read_timing

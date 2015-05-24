@@ -7,6 +7,7 @@
 /pkg/
 /spec/reports/
 /tmp/
-*.m
+/v1
+/v2
 /.idea/
 /config/v1.yml

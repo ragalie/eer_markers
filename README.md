@@ -20,7 +20,7 @@ Or install it yourself as:
 
     $ gem install eer_markers
 
-## Usage
+## Usage - Filtering Marker Files
 
 Copy the config/v1.yml.sample file to config/v1.yml. Then add and remove the row numbers that you want to keep in the v1 output. For instance, if you want to keep rows 1 and 2 (zero-indexed), you would have a YAML file like this:
 
@@ -37,6 +37,28 @@ Put your original files in the orig folder in this repository. Then run:
 When that completes, you'll see your v1 files in the v1 directory. You can then run:
 
     $ find v1 -name '*.m' -exec bundle exec bin/eer_markers2 {} \;
+
+## Usage - Producing Consolidated Dial Data
+
+Copy the config/dial.yml.sample file to config/dial.yml. Then add and remove the row numbers that you want to produce consolidated output for. For instance, if you want to produce output for rows 1 and 2 (zero-indexed), you would have a YAML file like this:
+
+```yaml
+rows:
+- 1
+- 2
+```
+
+Put your timing and dial files in separate directories under tmp. It's expected that your timing files are valid marker (.m) files named like PEG10101.icg.m (where 101 is your participant number) and that your dial files are XLSX files with a row for each second of dial data (starting at second 1) and a single column containing dial data, one per participant, named like 101.xlsx
+
+Then run:
+
+    $ bin/console
+
+```ruby
+EerMarkers::Dial.new("tmp/timing", "tmp/dial")
+```
+
+You should see your consolidated dial data in the dial directory.
 
 ## Development
 

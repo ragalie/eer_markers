@@ -10,8 +10,9 @@
 /pkg/
 /spec/reports/
 /tmp/
-/v1
-/v2
-/dial
+/v1/*.m
+/v2/*.m
+/dial/*.csv
 /.idea/
 /config/v1.yml
+/config/dial.yml
